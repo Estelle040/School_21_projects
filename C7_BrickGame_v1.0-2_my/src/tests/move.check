@@ -1,0 +1,37 @@
+#suite moveFigure
+
+#test moveDown_test_succes
+Figure_t * figure = createRandomFigure(0);
+figure->y = 1;
+int y_end = 2;
+moveDown(figure);
+ck_assert_int_eq(y_end, figure->y);
+freeFigure(figure);
+
+
+#test moveLeft_test_succes
+Figure_t * figure = createRandomFigure(0);
+figure->x = 5;
+int x_end = 4;
+moveLeft(figure);
+ck_assert_int_eq(x_end, figure->x);
+freeFigure(figure);
+
+
+#test moveRight_test_succes
+Figure_t * figure = createRandomFigure(0);
+figure->x = 5;
+int x_end = 6;
+moveRight(figure);
+ck_assert_int_eq(x_end, figure->x);
+freeFigure(figure);
+
+
+#test moveUp_test_succes
+Figure_t * figure = createRandomFigure(0);
+figure->y = 5;
+int y_end = 4;
+moveUp(figure);
+ck_assert_int_eq(y_end, figure->y);
+freeFigure(figure);
+
